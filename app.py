@@ -1,4 +1,4 @@
-import os.path
+import os
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
 
@@ -13,7 +13,7 @@ class MyServer(BaseHTTPRequestHandler):
             Класс, который отвечает за
         обработку входящих запросов
     """
-    content_file = os.path.join(ROOT_DIR, 'page', 'webpage.html')
+    content_file = os.path.join(ROOT_DIR, 'index.html')
 
     def get_content_data(self):
         with open(self.content_file, 'r', encoding='utf-8') as file:
